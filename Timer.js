@@ -6,7 +6,8 @@
  * @license MPL 2.0
  * @copyright Famous Industries, Inc. 2014
  */
-/*eslint func-style: [1, "declaration"] */
+// TODO this needs to be fixed
+/*eslint func-style: [0, "declaration"] */
 
 define(function(require, exports, module) {
     /**
@@ -59,6 +60,7 @@ define(function(require, exports, module) {
     function setTimeout(fn, duration) {
         var t = getTime();
         var callback = function() {
+
             var t2 = getTime();
             if (t2 - t >= duration) {
                 fn.apply(this, arguments);
